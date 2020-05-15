@@ -1,0 +1,493 @@
+# Logfile created on 2020-04-10 10:51:23 +0900 by logger.rb/66358
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-10 10:51:23 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8c7e52da] Running /usr/bin/env sudo mkdir -pv /var/www/cap_test as deploy@3.167.121.197
+ DEBUG [8c7e52da] Command: /usr/bin/env sudo mkdir -pv /var/www/cap_test
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-10 10:51:37 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5e0a3176] Running /usr/bin/env sudo mkdir -pv /var/www/cap_test as deploy@3.167.121.197
+ DEBUG [5e0a3176] Command: /usr/bin/env sudo mkdir -pv /var/www/cap_test
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-10 10:52:35 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [91bd3d4e] Running /usr/bin/env sudo mkdir -pv /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [91bd3d4e] Command: /usr/bin/env sudo mkdir -pv /var/www/cap_test
+ DEBUG [91bd3d4e] 	mkdir: created directory '/var/www/cap_test'
+  INFO [91bd3d4e] Finished in 0.303 seconds with exit status 0 (successful).
+ DEBUG [d98635cf] Running /usr/bin/env id -un as deploy@133.167.121.197
+ DEBUG [d98635cf] Command: /usr/bin/env id -un
+ DEBUG [d98635cf] 	deploy
+ DEBUG [d98635cf] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [4667a27d] Running /usr/bin/env id -gn as deploy@133.167.121.197
+ DEBUG [4667a27d] Command: /usr/bin/env id -gn
+ DEBUG [4667a27d] 	deploy
+ DEBUG [4667a27d] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [d178d8b8] Running /usr/bin/env sudo chown deploy:deploy /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [d178d8b8] Command: /usr/bin/env sudo chown deploy:deploy /var/www/cap_test
+  INFO [d178d8b8] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [605d62e8] Running /usr/bin/env mkdir -p /tmp as deploy@133.167.121.197
+ DEBUG [605d62e8] Command: /usr/bin/env mkdir -p /tmp
+  INFO [605d62e8] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap_test-production-kotakanazawa.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap_test-production-kotakanazawa.sh 100.0%
+  INFO [5a4b3d8b] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap_test-production-kotakanazawa.sh as deploy@133.167.121.197
+ DEBUG [5a4b3d8b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap_test-production-kotakanazawa.sh
+  INFO [5a4b3d8b] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [a37ef254] Running /usr/bin/env git ls-remote git@github.com:kotakanazawa/cap_test.git HEAD as deploy@133.167.121.197
+ DEBUG [a37ef254] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git ls-remote git@github.com:kotakanazawa/cap_test.git HEAD )
+ DEBUG [a37ef254] 	4636e62d9c9431e33b1ef16e35411a825df8424d	HEAD
+  INFO [a37ef254] Finished in 2.116 seconds with exit status 0 (successful).
+  INFO [87d4599c] Running /usr/bin/env mkdir -p /var/www/cap_test/shared /var/www/cap_test/releases as deploy@133.167.121.197
+ DEBUG [87d4599c] Command: /usr/bin/env mkdir -p /var/www/cap_test/shared /var/www/cap_test/releases
+  INFO [87d4599c] Finished in 0.037 seconds with exit status 0 (successful).
+ DEBUG [286a0495] Running [ -f /var/www/cap_test/current/REVISION ] as deploy@133.167.121.197
+ DEBUG [286a0495] Command: [ -f /var/www/cap_test/current/REVISION ]
+ DEBUG [286a0495] Finished in 0.079 seconds with exit status 1 (failed).
+ DEBUG [c291d621] Running [ -f /var/www/cap_test/repo/HEAD ] as deploy@133.167.121.197
+ DEBUG [c291d621] Command: [ -f /var/www/cap_test/repo/HEAD ]
+ DEBUG [c291d621] Finished in 0.071 seconds with exit status 1 (failed).
+ DEBUG [9985d565] Running if test ! -d /var/www/cap_test; then echo "Directory does not exist '/var/www/cap_test'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [9985d565] Command: if test ! -d /var/www/cap_test; then echo "Directory does not exist '/var/www/cap_test'" 1>&2; false; fi
+ DEBUG [9985d565] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [eba72ca0] Running /usr/bin/env git clone --mirror git@github.com:kotakanazawa/cap_test.git /var/www/cap_test/repo as deploy@133.167.121.197
+ DEBUG [eba72ca0] Command: cd /var/www/cap_test && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git clone --mirror git@github.com:kotakanazawa/cap_test.git /var/www/cap_test/repo )
+ DEBUG [eba72ca0] 	Cloning into bare repository '/var/www/cap_test/repo'...
+  INFO [eba72ca0] Finished in 2.003 seconds with exit status 0 (successful).
+ DEBUG [ef3d3854] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [ef3d3854] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [ef3d3854] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [a60b2f93] Running /usr/bin/env git remote set-url origin git@github.com:kotakanazawa/cap_test.git as deploy@133.167.121.197
+ DEBUG [a60b2f93] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git remote set-url origin git@github.com:kotakanazawa/cap_test.git )
+  INFO [a60b2f93] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [6ade818c] Running /usr/bin/env git remote update --prune as deploy@133.167.121.197
+ DEBUG [6ade818c] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6ade818c] 	Fetching origin
+  INFO [6ade818c] Finished in 1.954 seconds with exit status 0 (successful).
+ DEBUG [523eb0aa] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [523eb0aa] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [523eb0aa] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [1c2d0404] Running /usr/bin/env mkdir -p /var/www/cap_test/releases/20200410015239 as deploy@133.167.121.197
+ DEBUG [1c2d0404] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env mkdir -p /var/www/cap_test/releases/20200410015239 )
+  INFO [1c2d0404] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [40c4cdd1] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cap_test/releases/20200410015239 as deploy@133.167.121.197
+ DEBUG [40c4cdd1] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cap_test/releases/20200410015239 )
+  INFO [40c4cdd1] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [e9b31c07] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [e9b31c07] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [e9b31c07] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [b40a691c] Running /usr/bin/env git rev-list --max-count=1 master as deploy@133.167.121.197
+ DEBUG [b40a691c] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b40a691c] 	4636e62d9c9431e33b1ef16e35411a825df8424d
+ DEBUG [b40a691c] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [bba70d97] Running if test ! -d /var/www/cap_test/releases/20200410015239; then echo "Directory does not exist '/var/www/cap_test/releases/20200410015239'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [bba70d97] Command: if test ! -d /var/www/cap_test/releases/20200410015239; then echo "Directory does not exist '/var/www/cap_test/releases/20200410015239'" 1>&2; false; fi
+ DEBUG [bba70d97] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [63442e93] Running /usr/bin/env echo "4636e62d9c9431e33b1ef16e35411a825df8424d" > REVISION as deploy@133.167.121.197
+ DEBUG [63442e93] Command: cd /var/www/cap_test/releases/20200410015239 && /usr/bin/env echo "4636e62d9c9431e33b1ef16e35411a825df8424d" > REVISION
+  INFO [63442e93] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [5ebb7391] Running /usr/bin/env ln -s /var/www/cap_test/releases/20200410015239 /var/www/cap_test/releases/current as deploy@133.167.121.197
+ DEBUG [5ebb7391] Command: /usr/bin/env ln -s /var/www/cap_test/releases/20200410015239 /var/www/cap_test/releases/current
+  INFO [5ebb7391] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [d3bed3a4] Running /usr/bin/env mv /var/www/cap_test/releases/current /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [d3bed3a4] Command: /usr/bin/env mv /var/www/cap_test/releases/current /var/www/cap_test
+  INFO [d3bed3a4] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [944236c4] Running /usr/bin/env ls -x /var/www/cap_test/releases as deploy@133.167.121.197
+ DEBUG [944236c4] Command: /usr/bin/env ls -x /var/www/cap_test/releases
+ DEBUG [944236c4] 	20200410015239
+ DEBUG [944236c4] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [305078fe] Running if test ! -d /var/www/cap_test/releases; then echo "Directory does not exist '/var/www/cap_test/releases'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [305078fe] Command: if test ! -d /var/www/cap_test/releases; then echo "Directory does not exist '/var/www/cap_test/releases'" 1>&2; false; fi
+ DEBUG [305078fe] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [9e05f6a8] Running /usr/bin/env echo "Branch master (at 4636e62d9c9431e33b1ef16e35411a825df8424d) deployed as release 20200410015239 by kotakanazawa" >> /var/www/cap_test/revisions.log as deploy@133.167.121.197
+ DEBUG [9e05f6a8] Command: cd /var/www/cap_test/releases && /usr/bin/env echo "Branch master (at 4636e62d9c9431e33b1ef16e35411a825df8424d) deployed as release 20200410015239 by kotakanazawa" >> /var/www/cap_test/revisions.log
+  INFO [9e05f6a8] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-10 10:56:52 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [07eeece4] Running /usr/bin/env sudo mkdir -pv /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [07eeece4] Command: /usr/bin/env sudo mkdir -pv /var/www/cap_test
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-10 10:58:10 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c7356e8b] Running /usr/bin/env sudo mkdir -pv /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [c7356e8b] Command: /usr/bin/env sudo mkdir -pv /var/www/cap_test
+  INFO [c7356e8b] Finished in 0.318 seconds with exit status 0 (successful).
+ DEBUG [2a2656ac] Running /usr/bin/env id -un as deploy@133.167.121.197
+ DEBUG [2a2656ac] Command: /usr/bin/env id -un
+ DEBUG [2a2656ac] 	deploy
+ DEBUG [2a2656ac] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [19f16fff] Running /usr/bin/env id -gn as deploy@133.167.121.197
+ DEBUG [19f16fff] Command: /usr/bin/env id -gn
+ DEBUG [19f16fff] 	deploy
+ DEBUG [19f16fff] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [c8c306b7] Running /usr/bin/env sudo chown deploy:deploy /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [c8c306b7] Command: /usr/bin/env sudo chown deploy:deploy /var/www/cap_test
+  INFO [c8c306b7] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [edf40a63] Running /usr/bin/env mkdir -p /tmp as deploy@133.167.121.197
+ DEBUG [edf40a63] Command: /usr/bin/env mkdir -p /tmp
+  INFO [edf40a63] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap_test-production-kotakanazawa.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap_test-production-kotakanazawa.sh 100.0%
+  INFO [06872205] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap_test-production-kotakanazawa.sh as deploy@133.167.121.197
+ DEBUG [06872205] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap_test-production-kotakanazawa.sh
+  INFO [06872205] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [3da4c437] Running /usr/bin/env git ls-remote git@github.com:kotakanazawa/cap_test.git HEAD as deploy@133.167.121.197
+ DEBUG [3da4c437] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git ls-remote git@github.com:kotakanazawa/cap_test.git HEAD )
+ DEBUG [3da4c437] 	4636e62d9c9431e33b1ef16e35411a825df8424d	HEAD
+  INFO [3da4c437] Finished in 2.010 seconds with exit status 0 (successful).
+  INFO [6fc475ab] Running /usr/bin/env mkdir -p /var/www/cap_test/shared /var/www/cap_test/releases as deploy@133.167.121.197
+ DEBUG [6fc475ab] Command: /usr/bin/env mkdir -p /var/www/cap_test/shared /var/www/cap_test/releases
+  INFO [6fc475ab] Finished in 0.033 seconds with exit status 0 (successful).
+ DEBUG [198a72b6] Running [ -f /var/www/cap_test/current/REVISION ] as deploy@133.167.121.197
+ DEBUG [198a72b6] Command: [ -f /var/www/cap_test/current/REVISION ]
+ DEBUG [198a72b6] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [7481117a] Running /usr/bin/env cat /var/www/cap_test/current/REVISION 2>/dev/null as deploy@133.167.121.197
+ DEBUG [7481117a] Command: /usr/bin/env cat /var/www/cap_test/current/REVISION 2>/dev/null
+ DEBUG [7481117a] 	4636e62d9c9431e33b1ef16e35411a825df8424d
+ DEBUG [7481117a] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [cddbf349] Running [ -f /var/www/cap_test/repo/HEAD ] as deploy@133.167.121.197
+ DEBUG [cddbf349] Command: [ -f /var/www/cap_test/repo/HEAD ]
+ DEBUG [cddbf349] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cap_test/repo
+ DEBUG [a6cafd1c] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [a6cafd1c] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [a6cafd1c] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [56216798] Running /usr/bin/env git remote set-url origin git@github.com:kotakanazawa/cap_test.git as deploy@133.167.121.197
+ DEBUG [56216798] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git remote set-url origin git@github.com:kotakanazawa/cap_test.git )
+  INFO [56216798] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [8881e4f2] Running /usr/bin/env git remote update --prune as deploy@133.167.121.197
+ DEBUG [8881e4f2] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8881e4f2] 	Fetching origin
+  INFO [8881e4f2] Finished in 2.047 seconds with exit status 0 (successful).
+ DEBUG [fabea45b] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [fabea45b] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [fabea45b] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [5412908e] Running /usr/bin/env mkdir -p /var/www/cap_test/releases/20200410015813 as deploy@133.167.121.197
+ DEBUG [5412908e] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env mkdir -p /var/www/cap_test/releases/20200410015813 )
+  INFO [5412908e] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [4f985782] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cap_test/releases/20200410015813 as deploy@133.167.121.197
+ DEBUG [4f985782] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cap_test/releases/20200410015813 )
+  INFO [4f985782] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [311a0975] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [311a0975] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [311a0975] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [44ae6487] Running /usr/bin/env git rev-list --max-count=1 master as deploy@133.167.121.197
+ DEBUG [44ae6487] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [44ae6487] 	4636e62d9c9431e33b1ef16e35411a825df8424d
+ DEBUG [44ae6487] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [d2ceff15] Running if test ! -d /var/www/cap_test/releases/20200410015813; then echo "Directory does not exist '/var/www/cap_test/releases/20200410015813'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [d2ceff15] Command: if test ! -d /var/www/cap_test/releases/20200410015813; then echo "Directory does not exist '/var/www/cap_test/releases/20200410015813'" 1>&2; false; fi
+ DEBUG [d2ceff15] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [bf860c9e] Running /usr/bin/env echo "4636e62d9c9431e33b1ef16e35411a825df8424d" > REVISION as deploy@133.167.121.197
+ DEBUG [bf860c9e] Command: cd /var/www/cap_test/releases/20200410015813 && /usr/bin/env echo "4636e62d9c9431e33b1ef16e35411a825df8424d" > REVISION
+  INFO [bf860c9e] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO [618f17bc] Running /usr/bin/env ln -s /var/www/cap_test/releases/20200410015813 /var/www/cap_test/releases/current as deploy@133.167.121.197
+ DEBUG [618f17bc] Command: /usr/bin/env ln -s /var/www/cap_test/releases/20200410015813 /var/www/cap_test/releases/current
+  INFO [618f17bc] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [4db3e808] Running /usr/bin/env mv /var/www/cap_test/releases/current /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [4db3e808] Command: /usr/bin/env mv /var/www/cap_test/releases/current /var/www/cap_test
+  INFO [4db3e808] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [754a793a] Running /usr/bin/env ls -x /var/www/cap_test/releases as deploy@133.167.121.197
+ DEBUG [754a793a] Command: /usr/bin/env ls -x /var/www/cap_test/releases
+ DEBUG [754a793a] 	20200410015239	20200410015813
+ DEBUG [754a793a] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [191a5f81] Running if test ! -d /var/www/cap_test/releases; then echo "Directory does not exist '/var/www/cap_test/releases'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [191a5f81] Command: if test ! -d /var/www/cap_test/releases; then echo "Directory does not exist '/var/www/cap_test/releases'" 1>&2; false; fi
+ DEBUG [191a5f81] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [8fb73cdd] Running /usr/bin/env echo "Branch master (at 4636e62d9c9431e33b1ef16e35411a825df8424d) deployed as release 20200410015813 by kotakanazawa" >> /var/www/cap_test/revisions.log as deploy@133.167.121.197
+ DEBUG [8fb73cdd] Command: cd /var/www/cap_test/releases && /usr/bin/env echo "Branch master (at 4636e62d9c9431e33b1ef16e35411a825df8424d) deployed as release 20200410015813 by kotakanazawa" >> /var/www/cap_test/revisions.log
+  INFO [8fb73cdd] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-10 11:06:04 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [64292bee] Running /usr/bin/env sudo mkdir -pv /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [64292bee] Command: /usr/bin/env sudo mkdir -pv /var/www/cap_test
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-10 11:06:20 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [30061a01] Running /usr/bin/env sudo mkdir -pv /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [30061a01] Command: /usr/bin/env sudo mkdir -pv /var/www/cap_test
+  INFO [30061a01] Finished in 0.210 seconds with exit status 0 (successful).
+ DEBUG [9f66d9b8] Running /usr/bin/env id -un as deploy@133.167.121.197
+ DEBUG [9f66d9b8] Command: /usr/bin/env id -un
+ DEBUG [9f66d9b8] 	deploy
+ DEBUG [9f66d9b8] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [4386f294] Running /usr/bin/env id -gn as deploy@133.167.121.197
+ DEBUG [4386f294] Command: /usr/bin/env id -gn
+ DEBUG [4386f294] 	deploy
+ DEBUG [4386f294] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO [81d54c82] Running /usr/bin/env sudo chown deploy:deploy /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [81d54c82] Command: /usr/bin/env sudo chown deploy:deploy /var/www/cap_test
+  INFO [81d54c82] Finished in 0.073 seconds with exit status 0 (successful).
+  INFO [8acf1fcd] Running /usr/bin/env mkdir -p /tmp as deploy@133.167.121.197
+ DEBUG [8acf1fcd] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8acf1fcd] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap_test-production-kotakanazawa.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap_test-production-kotakanazawa.sh 100.0%
+  INFO [907214fb] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap_test-production-kotakanazawa.sh as deploy@133.167.121.197
+ DEBUG [907214fb] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap_test-production-kotakanazawa.sh
+  INFO [907214fb] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO [1e38a202] Running /usr/bin/env git ls-remote git@github.com:kotakanazawa/cap_test.git HEAD as deploy@133.167.121.197
+ DEBUG [1e38a202] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git ls-remote git@github.com:kotakanazawa/cap_test.git HEAD )
+ DEBUG [1e38a202] 	4636e62d9c9431e33b1ef16e35411a825df8424d	HEAD
+  INFO [1e38a202] Finished in 1.924 seconds with exit status 0 (successful).
+  INFO [9076b72d] Running /usr/bin/env mkdir -p /var/www/cap_test/shared /var/www/cap_test/releases as deploy@133.167.121.197
+ DEBUG [9076b72d] Command: /usr/bin/env mkdir -p /var/www/cap_test/shared /var/www/cap_test/releases
+  INFO [9076b72d] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [da4a58b0] Running [ -f /var/www/cap_test/current/REVISION ] as deploy@133.167.121.197
+ DEBUG [da4a58b0] Command: [ -f /var/www/cap_test/current/REVISION ]
+ DEBUG [da4a58b0] Finished in 0.141 seconds with exit status 0 (successful).
+ DEBUG [9f60d049] Running /usr/bin/env cat /var/www/cap_test/current/REVISION 2>/dev/null as deploy@133.167.121.197
+ DEBUG [9f60d049] Command: /usr/bin/env cat /var/www/cap_test/current/REVISION 2>/dev/null
+ DEBUG [9f60d049] 	4636e62d9c9431e33b1ef16e35411a825df8424d
+ DEBUG [9f60d049] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [0fff8aa9] Running [ -f /var/www/cap_test/repo/HEAD ] as deploy@133.167.121.197
+ DEBUG [0fff8aa9] Command: [ -f /var/www/cap_test/repo/HEAD ]
+ DEBUG [0fff8aa9] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cap_test/repo
+ DEBUG [d9c7790d] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [d9c7790d] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [d9c7790d] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [56ba3f15] Running /usr/bin/env git remote set-url origin git@github.com:kotakanazawa/cap_test.git as deploy@133.167.121.197
+ DEBUG [56ba3f15] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git remote set-url origin git@github.com:kotakanazawa/cap_test.git )
+  INFO [56ba3f15] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [e329e65d] Running /usr/bin/env git remote update --prune as deploy@133.167.121.197
+ DEBUG [e329e65d] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e329e65d] 	Fetching origin
+  INFO [e329e65d] Finished in 2.003 seconds with exit status 0 (successful).
+ DEBUG [fdf319c8] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [fdf319c8] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [fdf319c8] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [8ce5d7ab] Running /usr/bin/env mkdir -p /var/www/cap_test/releases/20200410020623 as deploy@133.167.121.197
+ DEBUG [8ce5d7ab] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env mkdir -p /var/www/cap_test/releases/20200410020623 )
+  INFO [8ce5d7ab] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [5d163e72] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cap_test/releases/20200410020623 as deploy@133.167.121.197
+ DEBUG [5d163e72] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cap_test/releases/20200410020623 )
+  INFO [5d163e72] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [c9689736] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [c9689736] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [c9689736] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [3f4318ca] Running /usr/bin/env git rev-list --max-count=1 master as deploy@133.167.121.197
+ DEBUG [3f4318ca] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3f4318ca] 	4636e62d9c9431e33b1ef16e35411a825df8424d
+ DEBUG [3f4318ca] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [e8b6cb10] Running if test ! -d /var/www/cap_test/releases/20200410020623; then echo "Directory does not exist '/var/www/cap_test/releases/20200410020623'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [e8b6cb10] Command: if test ! -d /var/www/cap_test/releases/20200410020623; then echo "Directory does not exist '/var/www/cap_test/releases/20200410020623'" 1>&2; false; fi
+ DEBUG [e8b6cb10] Finished in 0.073 seconds with exit status 0 (successful).
+  INFO [c6d24f14] Running /usr/bin/env echo "4636e62d9c9431e33b1ef16e35411a825df8424d" > REVISION as deploy@133.167.121.197
+ DEBUG [c6d24f14] Command: cd /var/www/cap_test/releases/20200410020623 && /usr/bin/env echo "4636e62d9c9431e33b1ef16e35411a825df8424d" > REVISION
+  INFO [c6d24f14] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [0c48551b] Running /usr/bin/env ln -s /var/www/cap_test/releases/20200410020623 /var/www/cap_test/releases/current as deploy@133.167.121.197
+ DEBUG [0c48551b] Command: /usr/bin/env ln -s /var/www/cap_test/releases/20200410020623 /var/www/cap_test/releases/current
+  INFO [0c48551b] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [2ad0e1a4] Running /usr/bin/env mv /var/www/cap_test/releases/current /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [2ad0e1a4] Command: /usr/bin/env mv /var/www/cap_test/releases/current /var/www/cap_test
+  INFO [2ad0e1a4] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [f876fe78] Running /usr/bin/env ls -x /var/www/cap_test/releases as deploy@133.167.121.197
+ DEBUG [f876fe78] Command: /usr/bin/env ls -x /var/www/cap_test/releases
+ DEBUG [f876fe78] 	20200410015239	20200410015813	20200410020623
+ DEBUG [f876fe78] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [819ca511] Running if test ! -d /var/www/cap_test/releases; then echo "Directory does not exist '/var/www/cap_test/releases'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [819ca511] Command: if test ! -d /var/www/cap_test/releases; then echo "Directory does not exist '/var/www/cap_test/releases'" 1>&2; false; fi
+ DEBUG [819ca511] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [4c50cfa1] Running /usr/bin/env echo "Branch master (at 4636e62d9c9431e33b1ef16e35411a825df8424d) deployed as release 20200410020623 by kotakanazawa" >> /var/www/cap_test/revisions.log as deploy@133.167.121.197
+ DEBUG [4c50cfa1] Command: cd /var/www/cap_test/releases && /usr/bin/env echo "Branch master (at 4636e62d9c9431e33b1ef16e35411a825df8424d) deployed as release 20200410020623 by kotakanazawa" >> /var/www/cap_test/revisions.log
+  INFO [4c50cfa1] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-10 11:16:52 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ecfa105b] Running /usr/bin/env sudo mkdir -pv /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [ecfa105b] Command: /usr/bin/env sudo mkdir -pv /var/www/cap_test
+  INFO [ecfa105b] Finished in 0.278 seconds with exit status 0 (successful).
+ DEBUG [b899c269] Running /usr/bin/env id -un as deploy@133.167.121.197
+ DEBUG [b899c269] Command: /usr/bin/env id -un
+ DEBUG [b899c269] 	deploy
+ DEBUG [b899c269] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [e1e9c585] Running /usr/bin/env id -gn as deploy@133.167.121.197
+ DEBUG [e1e9c585] Command: /usr/bin/env id -gn
+ DEBUG [e1e9c585] 	deploy
+ DEBUG [e1e9c585] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [c468d38b] Running /usr/bin/env sudo chown deploy:deploy /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [c468d38b] Command: /usr/bin/env sudo chown deploy:deploy /var/www/cap_test
+  INFO [c468d38b] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [4db1e809] Running /usr/bin/env mkdir -p /tmp as deploy@133.167.121.197
+ DEBUG [4db1e809] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4db1e809] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap_test-production-kotakanazawa.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap_test-production-kotakanazawa.sh 100.0%
+  INFO [6223b9eb] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap_test-production-kotakanazawa.sh as deploy@133.167.121.197
+ DEBUG [6223b9eb] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap_test-production-kotakanazawa.sh
+  INFO [6223b9eb] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [489d45f7] Running /usr/bin/env git ls-remote git@github.com:kotakanazawa/cap_test.git HEAD as deploy@133.167.121.197
+ DEBUG [489d45f7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git ls-remote git@github.com:kotakanazawa/cap_test.git HEAD )
+ DEBUG [489d45f7] 	4636e62d9c9431e33b1ef16e35411a825df8424d	HEAD
+  INFO [489d45f7] Finished in 2.030 seconds with exit status 0 (successful).
+  INFO [411a8e0b] Running /usr/bin/env mkdir -p /var/www/cap_test/shared /var/www/cap_test/releases as deploy@133.167.121.197
+ DEBUG [411a8e0b] Command: /usr/bin/env mkdir -p /var/www/cap_test/shared /var/www/cap_test/releases
+  INFO [411a8e0b] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [dca6764b] Running [ -f /var/www/cap_test/current/REVISION ] as deploy@133.167.121.197
+ DEBUG [dca6764b] Command: [ -f /var/www/cap_test/current/REVISION ]
+ DEBUG [dca6764b] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [4fc66ac8] Running /usr/bin/env cat /var/www/cap_test/current/REVISION 2>/dev/null as deploy@133.167.121.197
+ DEBUG [4fc66ac8] Command: /usr/bin/env cat /var/www/cap_test/current/REVISION 2>/dev/null
+ DEBUG [4fc66ac8] 	4636e62d9c9431e33b1ef16e35411a825df8424d
+ DEBUG [4fc66ac8] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [38c16b3e] Running [ -f /var/www/cap_test/repo/HEAD ] as deploy@133.167.121.197
+ DEBUG [38c16b3e] Command: [ -f /var/www/cap_test/repo/HEAD ]
+ DEBUG [38c16b3e] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cap_test/repo
+ DEBUG [6020ef2e] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [6020ef2e] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [6020ef2e] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [01e2a69e] Running /usr/bin/env git remote set-url origin git@github.com:kotakanazawa/cap_test.git as deploy@133.167.121.197
+ DEBUG [01e2a69e] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git remote set-url origin git@github.com:kotakanazawa/cap_test.git )
+  INFO [01e2a69e] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [1ddfc7d0] Running /usr/bin/env git remote update --prune as deploy@133.167.121.197
+ DEBUG [1ddfc7d0] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1ddfc7d0] 	Fetching origin
+  INFO [1ddfc7d0] Finished in 2.132 seconds with exit status 0 (successful).
+ DEBUG [558c0efb] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [558c0efb] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [558c0efb] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [ada9efc7] Running /usr/bin/env mkdir -p /var/www/cap_test/releases/20200410021655 as deploy@133.167.121.197
+ DEBUG [ada9efc7] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env mkdir -p /var/www/cap_test/releases/20200410021655 )
+  INFO [ada9efc7] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [f9639ca4] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cap_test/releases/20200410021655 as deploy@133.167.121.197
+ DEBUG [f9639ca4] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cap_test/releases/20200410021655 )
+  INFO [f9639ca4] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [227a23b2] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [227a23b2] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [227a23b2] Finished in 0.071 seconds with exit status 0 (successful).
+ DEBUG [68d2ed2c] Running /usr/bin/env git rev-list --max-count=1 master as deploy@133.167.121.197
+ DEBUG [68d2ed2c] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [68d2ed2c] 	4636e62d9c9431e33b1ef16e35411a825df8424d
+ DEBUG [68d2ed2c] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [8dc655ca] Running if test ! -d /var/www/cap_test/releases/20200410021655; then echo "Directory does not exist '/var/www/cap_test/releases/20200410021655'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [8dc655ca] Command: if test ! -d /var/www/cap_test/releases/20200410021655; then echo "Directory does not exist '/var/www/cap_test/releases/20200410021655'" 1>&2; false; fi
+ DEBUG [8dc655ca] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO [9bbc5658] Running /usr/bin/env echo "4636e62d9c9431e33b1ef16e35411a825df8424d" > REVISION as deploy@133.167.121.197
+ DEBUG [9bbc5658] Command: cd /var/www/cap_test/releases/20200410021655 && /usr/bin/env echo "4636e62d9c9431e33b1ef16e35411a825df8424d" > REVISION
+  INFO [9bbc5658] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [b34bed80] Running /usr/bin/env ln -s /var/www/cap_test/releases/20200410021655 /var/www/cap_test/releases/current as deploy@133.167.121.197
+ DEBUG [b34bed80] Command: /usr/bin/env ln -s /var/www/cap_test/releases/20200410021655 /var/www/cap_test/releases/current
+  INFO [b34bed80] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [e655c96d] Running /usr/bin/env mv /var/www/cap_test/releases/current /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [e655c96d] Command: /usr/bin/env mv /var/www/cap_test/releases/current /var/www/cap_test
+  INFO [e655c96d] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [fad41228] Running /usr/bin/env ls -x /var/www/cap_test/releases as deploy@133.167.121.197
+ DEBUG [fad41228] Command: /usr/bin/env ls -x /var/www/cap_test/releases
+ DEBUG [fad41228] 	20200410015239	20200410015813	20200410020623	20200410021655
+ DEBUG [fad41228] Finished in 0.071 seconds with exit status 0 (successful).
+ DEBUG [e3f25fc8] Running if test ! -d /var/www/cap_test/releases; then echo "Directory does not exist '/var/www/cap_test/releases'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [e3f25fc8] Command: if test ! -d /var/www/cap_test/releases; then echo "Directory does not exist '/var/www/cap_test/releases'" 1>&2; false; fi
+ DEBUG [e3f25fc8] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO [dbe34e7c] Running /usr/bin/env echo "Branch master (at 4636e62d9c9431e33b1ef16e35411a825df8424d) deployed as release 20200410021655 by kotakanazawa" >> /var/www/cap_test/revisions.log as deploy@133.167.121.197
+ DEBUG [dbe34e7c] Command: cd /var/www/cap_test/releases && /usr/bin/env echo "Branch master (at 4636e62d9c9431e33b1ef16e35411a825df8424d) deployed as release 20200410021655 by kotakanazawa" >> /var/www/cap_test/revisions.log
+  INFO [dbe34e7c] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-10 11:17:18 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8148c25e] Running /usr/bin/env sudo mkdir -pv /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [8148c25e] Command: /usr/bin/env sudo mkdir -pv /var/www/cap_test
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-10 11:17:34 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4f51392e] Running /usr/bin/env sudo mkdir -pv /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [4f51392e] Command: /usr/bin/env sudo mkdir -pv /var/www/cap_test
+  INFO [4f51392e] Finished in 0.325 seconds with exit status 0 (successful).
+ DEBUG [22aa3853] Running /usr/bin/env id -un as deploy@133.167.121.197
+ DEBUG [22aa3853] Command: /usr/bin/env id -un
+ DEBUG [22aa3853] 	deploy
+ DEBUG [22aa3853] Finished in 0.105 seconds with exit status 0 (successful).
+ DEBUG [b769c982] Running /usr/bin/env id -gn as deploy@133.167.121.197
+ DEBUG [b769c982] Command: /usr/bin/env id -gn
+ DEBUG [b769c982] 	deploy
+ DEBUG [b769c982] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO [46c2e945] Running /usr/bin/env sudo chown deploy:deploy /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [46c2e945] Command: /usr/bin/env sudo chown deploy:deploy /var/www/cap_test
+  INFO [46c2e945] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [57a271a9] Running /usr/bin/env mkdir -p /tmp as deploy@133.167.121.197
+ DEBUG [57a271a9] Command: /usr/bin/env mkdir -p /tmp
+  INFO [57a271a9] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cap_test-production-kotakanazawa.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cap_test-production-kotakanazawa.sh 100.0%
+  INFO [e32a00d9] Running /usr/bin/env chmod 700 /tmp/git-ssh-cap_test-production-kotakanazawa.sh as deploy@133.167.121.197
+ DEBUG [e32a00d9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cap_test-production-kotakanazawa.sh
+  INFO [e32a00d9] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [7f1f7eb3] Running /usr/bin/env git ls-remote git@github.com:kotakanazawa/cap_test.git HEAD as deploy@133.167.121.197
+ DEBUG [7f1f7eb3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git ls-remote git@github.com:kotakanazawa/cap_test.git HEAD )
+ DEBUG [7f1f7eb3] 	4636e62d9c9431e33b1ef16e35411a825df8424d	HEAD
+  INFO [7f1f7eb3] Finished in 1.989 seconds with exit status 0 (successful).
+  INFO [05ef3a88] Running /usr/bin/env mkdir -p /var/www/cap_test/shared /var/www/cap_test/releases as deploy@133.167.121.197
+ DEBUG [05ef3a88] Command: /usr/bin/env mkdir -p /var/www/cap_test/shared /var/www/cap_test/releases
+  INFO [05ef3a88] Finished in 0.236 seconds with exit status 0 (successful).
+ DEBUG [2228263c] Running [ -f /var/www/cap_test/current/REVISION ] as deploy@133.167.121.197
+ DEBUG [2228263c] Command: [ -f /var/www/cap_test/current/REVISION ]
+ DEBUG [2228263c] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [30654062] Running /usr/bin/env cat /var/www/cap_test/current/REVISION 2>/dev/null as deploy@133.167.121.197
+ DEBUG [30654062] Command: /usr/bin/env cat /var/www/cap_test/current/REVISION 2>/dev/null
+ DEBUG [30654062] 	4636e62d9c9431e33b1ef16e35411a825df8424d
+ DEBUG [30654062] Finished in 0.820 seconds with exit status 0 (successful).
+ DEBUG [5c082645] Running [ -f /var/www/cap_test/repo/HEAD ] as deploy@133.167.121.197
+ DEBUG [5c082645] Command: [ -f /var/www/cap_test/repo/HEAD ]
+ DEBUG [5c082645] Finished in 0.198 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cap_test/repo
+ DEBUG [8224e76c] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [8224e76c] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [8224e76c] Finished in 0.309 seconds with exit status 0 (successful).
+  INFO [c1912c8f] Running /usr/bin/env git remote set-url origin git@github.com:kotakanazawa/cap_test.git as deploy@133.167.121.197
+ DEBUG [c1912c8f] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git remote set-url origin git@github.com:kotakanazawa/cap_test.git )
+  INFO [c1912c8f] Finished in 0.111 seconds with exit status 0 (successful).
+  INFO [3296d5d4] Running /usr/bin/env git remote update --prune as deploy@133.167.121.197
+ DEBUG [3296d5d4] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3296d5d4] 	Fetching origin
+  INFO [3296d5d4] Finished in 2.246 seconds with exit status 0 (successful).
+ DEBUG [b50eecc6] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [b50eecc6] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [b50eecc6] Finished in 0.032 seconds with exit status 0 (successful).
+  INFO [41b58e61] Running /usr/bin/env mkdir -p /var/www/cap_test/releases/20200410021738 as deploy@133.167.121.197
+ DEBUG [41b58e61] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env mkdir -p /var/www/cap_test/releases/20200410021738 )
+  INFO [41b58e61] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [95d787ae] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cap_test/releases/20200410021738 as deploy@133.167.121.197
+ DEBUG [95d787ae] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cap_test/releases/20200410021738 )
+  INFO [95d787ae] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [4b2a4066] Running if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [4b2a4066] Command: if test ! -d /var/www/cap_test/repo; then echo "Directory does not exist '/var/www/cap_test/repo'" 1>&2; false; fi
+ DEBUG [4b2a4066] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG [a8122856] Running /usr/bin/env git rev-list --max-count=1 master as deploy@133.167.121.197
+ DEBUG [a8122856] Command: cd /var/www/cap_test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cap_test-production-kotakanazawa.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a8122856] 	4636e62d9c9431e33b1ef16e35411a825df8424d
+ DEBUG [a8122856] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [77d3fb11] Running if test ! -d /var/www/cap_test/releases/20200410021738; then echo "Directory does not exist '/var/www/cap_test/releases/20200410021738'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [77d3fb11] Command: if test ! -d /var/www/cap_test/releases/20200410021738; then echo "Directory does not exist '/var/www/cap_test/releases/20200410021738'" 1>&2; false; fi
+ DEBUG [77d3fb11] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [dd4333da] Running /usr/bin/env echo "4636e62d9c9431e33b1ef16e35411a825df8424d" > REVISION as deploy@133.167.121.197
+ DEBUG [dd4333da] Command: cd /var/www/cap_test/releases/20200410021738 && /usr/bin/env echo "4636e62d9c9431e33b1ef16e35411a825df8424d" > REVISION
+  INFO [dd4333da] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [f5382d9c] Running /usr/bin/env ln -s /var/www/cap_test/releases/20200410021738 /var/www/cap_test/releases/current as deploy@133.167.121.197
+ DEBUG [f5382d9c] Command: /usr/bin/env ln -s /var/www/cap_test/releases/20200410021738 /var/www/cap_test/releases/current
+  INFO [f5382d9c] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [cc6ab570] Running /usr/bin/env mv /var/www/cap_test/releases/current /var/www/cap_test as deploy@133.167.121.197
+ DEBUG [cc6ab570] Command: /usr/bin/env mv /var/www/cap_test/releases/current /var/www/cap_test
+  INFO [cc6ab570] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [e0f2199a] Running /usr/bin/env ls -x /var/www/cap_test/releases as deploy@133.167.121.197
+ DEBUG [e0f2199a] Command: /usr/bin/env ls -x /var/www/cap_test/releases
+ DEBUG [e0f2199a] 	20200410015239	20200410015813	20200410020623	20200410021655	20200410021738
+ DEBUG [e0f2199a] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 5 deployed releases on 133.167.121.197
+ DEBUG [6095d3f4] Running [ -d /var/www/cap_test/current ] as deploy@133.167.121.197
+ DEBUG [6095d3f4] Command: [ -d /var/www/cap_test/current ]
+ DEBUG [6095d3f4] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [981c4291] Running /usr/bin/env readlink /var/www/cap_test/current as deploy@133.167.121.197
+ DEBUG [981c4291] Command: /usr/bin/env readlink /var/www/cap_test/current
+ DEBUG [981c4291] 	/var/www/cap_test/releases/20200410021738
+ DEBUG [981c4291] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO No old releases (keeping newest 5) on 133.167.121.197
+ DEBUG [0da2d777] Running if test ! -d /var/www/cap_test/releases; then echo "Directory does not exist '/var/www/cap_test/releases'" 1>&2; false; fi as deploy@133.167.121.197
+ DEBUG [0da2d777] Command: if test ! -d /var/www/cap_test/releases; then echo "Directory does not exist '/var/www/cap_test/releases'" 1>&2; false; fi
+ DEBUG [0da2d777] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [bb50735c] Running /usr/bin/env echo "Branch master (at 4636e62d9c9431e33b1ef16e35411a825df8424d) deployed as release 20200410021738 by kotakanazawa" >> /var/www/cap_test/revisions.log as deploy@133.167.121.197
+ DEBUG [bb50735c] Command: cd /var/www/cap_test/releases && /usr/bin/env echo "Branch master (at 4636e62d9c9431e33b1ef16e35411a825df8424d) deployed as release 20200410021738 by kotakanazawa" >> /var/www/cap_test/revisions.log
+  INFO [bb50735c] Finished in 0.091 seconds with exit status 0 (successful).

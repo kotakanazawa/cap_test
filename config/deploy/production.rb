@@ -1,4 +1,4 @@
-server "3.167.121.197", user: "deploy", roles: %w{web db app}
+server "133.167.121.197", user: "deploy", roles: %w{web db app}
 
 # ssh
 set :ssh_options, {
